@@ -41,7 +41,6 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
             <div>
               <div className="flex items-baseline space-x-1">
                 <span className="font-display font-bold text-2xl md:text-3xl tracking-tight text-blue-900">ASEC</span>
-                <span className="text-slate-400 font-light text-sm tracking-widest font-display">ASIA</span>
               </div>
               <p className="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-widest font-sans font-semibold">Engineering & Distribution</p>
             </div>

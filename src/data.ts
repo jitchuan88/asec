@@ -1,25 +1,28 @@
 import { HeroSlide, Capability, WhyChooseItem, BrandPartner, SolutionCategory } from './types';
+import bgNaval from './assets/images/naval_vessel_operations_1781783674796.jpg';
+import bgAerospace from './assets/images/aerospace_electronics_1781783691785.jpg';
+import bgManufacturing from './assets/images/clean_manufacturing_1781783709502.jpg';
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: 1,
     title: "Naval & Defense Systems",
     subtitle: "Complete lifecycle support and critical systems engineering for elite naval fleet vessels including Formidable-class, Endurance-class, and responsive rescue units.",
-    bgImage: "/src/assets/images/naval_vessel_operations_1781783674796.jpg",
+    bgImage: bgNaval,
     topic: "Naval Operations"
   },
   {
     id: 2,
     title: "Aerospace & Mission-Critical Cabling",
     subtitle: "Premium material integration, high-screening electromagnetic shielding, and extreme military-standard wiring for harsh-environment aerospace operations.",
-    bgImage: "/src/assets/images/aerospace_electronics_1781783691785.jpg",
+    bgImage: bgAerospace,
     topic: "Aerospace Electronics"
   },
   {
     id: 3,
     title: "Precision Engineering & System Integration",
     subtitle: "Underpinned by technical excellence, delivering specialized custom manufacturing, power solutions, and platform security integrations since 1981.",
-    bgImage: "/src/assets/images/clean_manufacturing_1781783709502.jpg",
+    bgImage: bgManufacturing,
     topic: "Cleanroom Manufacturing"
   }
 ];

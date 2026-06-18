@@ -1,0 +1,6 @@
+{
+  "name": "ASEC Corporate Website",
+  "description": "A clean, simple, and polished corporate website for ASEC (ASEC Asia Pte Ltd and ASEC Industries Pte Ltd). Offering complete lifecycle support, system integration, and critical material distribution for defense, maritime, and key commercial sectors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -25,6 +25,7 @@ export interface BrandPartner {
   name: string;
   logoText: string;
   description: string;
+  logo?: string;
 }
 
 export interface SubCategoryItem {
@@ -36,12 +37,14 @@ export interface SubCategoryItem {
   keyApplications?: string[];
   trackRecord?: string;
   keyCharacteristics?: string[];
+  technicalHighlights?: string[];
   technicalRange?: string;
   solutions?: string[];
   projectFootprint?: string[];
   capabilities?: string[];
   activeDeployment?: string[];
   technology?: string;
+  services?: { name: string; marketPosition?: string; description: string }[];
 }
 
 export interface SolutionCategory {

@@ -15,11 +15,12 @@ import { ActiveTab } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('home');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Scroll to top on tab change
+  // Scroll to top on tab change or category change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [activeTab]);
+  }, [activeTab, selectedCategory]);
 
   const renderActivePage = () => {
     switch (activeTab) {
@@ -30,7 +31,13 @@ export default function App() {
       case 'services':
         return <Services />;
       case 'solutions':
-        return <Solutions />;
+        return (
+          <Solutions 
+            selectedCategory={selectedCategory} 
+            setSelectedCategory={setSelectedCategory}
+            setActiveTab={setActiveTab}
+          />
+        );
       case 'contact':
         return <Contact />;
       default:
@@ -41,7 +48,12 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-navy-900 selection:bg-blue-600 selection:text-white antialiased">
       {/* Sitewide sticky Header */}
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Header 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
 
       {/* Main Content Pane with smooth min-height expansion & layout container */}
       <main className="flex-grow">

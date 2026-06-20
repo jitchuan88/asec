@@ -32,8 +32,8 @@ h1, h2, h3, h4, .font-display {
 /* Custom fade indicator or banner animation if needed */
 .logo-ribbon-track {
   display: flex;
-  width: calc(250px * 18);
-  animation: scroll 35s linear infinite;
+  width: calc(250px * 24);
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {
@@ -41,7 +41,7 @@ h1, h2, h3, h4, .font-display {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 9));
+    transform: translateX(calc(-250px * 12));
   }
 }
 

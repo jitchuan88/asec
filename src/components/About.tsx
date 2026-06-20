@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, Cpu, HeartHandshake, Award, Activity } from 'lucide-react';
+import { ShieldAlert, Cpu, HeartHandshake, Award, Activity, Boxes } from 'lucide-react';
 
 export default function About() {
   return (
@@ -8,9 +8,6 @@ export default function About() {
         
         {/* Page Title Header */}
         <div className="text-left max-w-3xl space-y-4">
-          <span className="text-xs font-bold text-blue-900 uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">
-            Company Profile — Incorporated 1981
-          </span>
           <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Our Foundation & Mission
           </h1>
@@ -33,11 +30,8 @@ export default function About() {
                 Our Foundation
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed font-sans">
-                Founded in 1981, ASEC (operating as <strong>ASEC Asia Pte Ltd</strong> and <strong>ASEC Industries Pte Ltd</strong>) has grown into a premier technical sales, distribution, and custom manufacturing firm in the Southeast Asian region.
+                Founded in 1981, ASEC operating through <strong>ASEC Asia Pte Ltd</strong> and <strong>ASEC Industries Pte Ltd</strong>—has grown into a premier technical engineering, distribution, and custom manufacturing firm in Asia.
               </p>
-              <div className="pt-4 border-t border-slate-200 flex items-center space-x-2 font-mono text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                <span>Singapore HQ Entities</span>
-              </div>
             </div>
           </div>
 
@@ -54,9 +48,6 @@ export default function About() {
               <p className="text-sm text-slate-600 leading-relaxed font-sans">
                 We bridge the gap between world-class original equipment manufacturers and rigorous domestic demands, functioning as an indispensable partner for system upgrade programs, complex system integration, and obsolescence management workflows.
               </p>
-              <div className="pt-4 border-t border-slate-200 flex items-center space-x-2 font-mono text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                <span>Full Lifecycle System Integration</span>
-              </div>
             </div>
           </div>
 
@@ -73,7 +64,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Capability 1 */}
             <div className="bg-white border border-slate-200 p-6 rounded-sm flex flex-col justify-between hover:border-blue-900 transition-all">
@@ -115,6 +106,24 @@ export default function About() {
             <div className="bg-white border border-slate-200 p-6 rounded-sm flex flex-col justify-between hover:border-blue-900 transition-all">
               <div className="space-y-3">
                 <div className="h-10 w-10 bg-blue-100 text-blue-900 rounded-sm flex items-center justify-center">
+                  <Boxes className="h-5 w-5" />
+                </div>
+                <h3 className="font-display text-base font-bold text-slate-900">
+                  Spare Management & Warehousing Capability
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                  Comprehensive spare parts planning, cataloging, inventory provisioning, and obsolescence management programs to maintain long-term asset readiness.
+                </p>
+              </div>
+              <div className="mt-6 pt-3 border-t border-slate-200 text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider">
+                Strategic Stock & Sourcing
+              </div>
+            </div>
+
+            {/* Capability 4 */}
+            <div className="bg-white border border-slate-200 p-6 rounded-sm flex flex-col justify-between hover:border-blue-900 transition-all">
+              <div className="space-y-3">
+                <div className="h-10 w-10 bg-blue-100 text-blue-900 rounded-sm flex items-center justify-center">
                   <ShieldAlert className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-base font-bold text-slate-900">
@@ -125,7 +134,7 @@ export default function About() {
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-slate-200 text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider">
-                Navy Infotech Protection Compliance
+                Infotech Protection Compliance
               </div>
             </div>
 

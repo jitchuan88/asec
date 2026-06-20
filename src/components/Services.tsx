@@ -1,5 +1,5 @@
 import React from 'react';
-import { Settings, RefreshCw, Anchor, ShieldCheck, Zap } from 'lucide-react';
+import { Settings, RefreshCw, Anchor, ShieldCheck } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -15,7 +15,7 @@ export default function Services() {
       id: "obsolescence",
       title: "Obsolescence Management",
       icon: RefreshCw,
-      scope: "Proactive auditing, strategic retrofits, and exact-fit replacement components designed to combat hardware wear and aging.",
+      scope: "Proactive auditing, comprehensive warehouse services, strategic retrofits, and exact-fit replacement components designed to combat hardware wear and aging.",
       mission: "Extending the dependable operational lifespan of capital assets and maintaining baseline platform reliability.",
       badge: "Asset Lifetime Extension"
     },
@@ -23,7 +23,7 @@ export default function Services() {
       id: "defense-cables",
       title: "Defense Cables & Marine Spares",
       icon: Anchor,
-      scope: "High-tier sourcing, testing, and continuous deployment of ruggedized military-standard wiring, electrical components, and naval auxiliary equipment.",
+      scope: "High-tier sourcing, testing, and continuous deployment of ruggedized military-standard wiring, electrical components, naval auxiliary equipment and deck machineries.",
       mission: "Ensuring critical components remain immediately available to minimize vessel and system downtime.",
       badge: "Mil-Spec Sourcing Authorized"
     }
@@ -35,9 +35,6 @@ export default function Services() {
         
         {/* Header */}
         <div className="text-left max-w-3xl space-y-4">
-          <span className="text-xs font-bold text-blue-900 uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full">
-            Technical Operations & Marine Services
-          </span>
           <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Our Engineering Services
           </h1>
@@ -73,16 +70,6 @@ export default function Services() {
                         {service.title}
                       </h2>
                     </div>
-
-                    <div className="bg-white border border-slate-200 p-4 rounded-sm hidden lg:block">
-                      <div className="flex items-center space-x-1.5 text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider">
-                        <Zap className="h-3 w-3 text-blue-900" />
-                        <span>OPERATIONAL COMPLIANCE</span>
-                      </div>
-                      <p className="text-[10px] text-slate-500 mt-1 font-sans">
-                        Engineered under ISO manufacturing guidelines and verified for Singapore Navy platforms.
-                      </p>
-                    </div>
                   </div>
 
                   {/* Service Specifics (Scope & Mission) */}
@@ -90,7 +77,7 @@ export default function Services() {
                     
                     {/* Scope Card */}
                     <div className="bg-white p-6 rounded-sm border border-slate-200 hover:border-blue-900 transition-colors shadow-xs">
-                      <h3 className="text-[10px] font-mono tracking-widest text-slate-400 uppercase font-bold mb-2">
+                      <h3 className="text-[10px] font-mono tracking-widest text-blue-900 uppercase font-bold mb-2">
                         Operational Scope
                       </h3>
                       <p className="text-sm text-slate-700 leading-relaxed font-sans">
@@ -116,22 +103,7 @@ export default function Services() {
           })}
         </div>
 
-        {/* Info Signpost Banner */}
-        <div className="bg-slate-950 p-8 rounded-sm text-left border border-slate-800 shadow-md">
-          <div className="max-w-3xl space-y-4">
-            <h3 className="font-display text-xl font-bold text-white leading-tight">
-              Need custom technical designs for specialized systems?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans">
-              ASEC maintains dedicated manufacturing and electrical design benches to assemble custom enclosures, safety safety isolation transformers, and naval low location layouts.
-            </p>
-            <div className="pt-2">
-              <span className="text-xs font-mono font-bold text-blue-400 uppercase tracking-wide">
-                Enquire with Singapore Desk on our site contact form.
-              </span>
-            </div>
-          </div>
-        </div>
+
 
       </div>
     </div>

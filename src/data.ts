@@ -1,7 +1,19 @@
 import { HeroSlide, Capability, WhyChooseItem, BrandPartner, SolutionCategory } from './types';
 import bgNaval from './assets/images/naval_vessel_operations_1781783674796.jpg';
 import bgAerospace from './assets/images/aerospace_electronics_1781783691785.jpg';
-import bgManufacturing from './assets/images/clean_manufacturing_1781783709502.jpg';
+
+import logoHabia from './assets/images/habia_cable_logo_1781854960727.jpg';
+import logoOxley from './assets/images/oxley_logo_1781854976103.jpg';
+import logoEaton from './assets/images/eaton_logo_1781854991282.jpg';
+import logoITW from './assets/images/itw_gse_logo_1781855005198.jpg';
+import logoBosch from './assets/images/bosch_logo_1781855017752.jpg';
+import logoDEF from './assets/images/def_marine_logo_1781855031089.jpg';
+import logoShorelink from './assets/images/shorelink_logo_1781855052754.jpg';
+import logoMarinelec from './assets/images/marinelec_logo_1781855065628.jpg';
+import logoFortinet from './assets/images/fortinet_logo_1781855075575.jpg';
+import logoKrempel from './assets/images/krempel_logo_1781855088039.jpg';
+import logoEetarp from './assets/images/eetarp_logo_1781855099388.jpg';
+import logoEnerSys from './assets/images/enersys_logo_1781855110987.jpg';
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
@@ -17,13 +29,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle: "Premium material integration, high-screening electromagnetic shielding, and extreme military-standard wiring for harsh-environment aerospace operations.",
     bgImage: bgAerospace,
     topic: "Aerospace Electronics"
-  },
-  {
-    id: 3,
-    title: "Precision Engineering & System Integration",
-    subtitle: "Underpinned by technical excellence, delivering specialized custom manufacturing, power solutions, and platform security integrations since 1981.",
-    bgImage: bgManufacturing,
-    topic: "Cleanroom Manufacturing"
   }
 ];
 
@@ -45,15 +50,15 @@ export const CAPABILITIES: Capability[] = [
   },
   {
     id: 4,
-    title: "Spare Management",
-    description: "Dedicated supply chain support and marine components to ensure long-term operational readiness."
+    title: "Spare Management & Warehousing",
+    description: "Dedicated supply chain support to ensure long-term operational readiness."
   },
   {
     id: 5,
     title: "Enterprise IT & Platform Security",
     description: "Integrating advanced enterprise information technology and robust cyber resilience solutioning."
   }
-];
+].sort((a, b) => a.title.localeCompare(b.title));
 
 export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
   {
@@ -66,7 +71,7 @@ export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
     id: 2,
     badge: "Trusted",
     title: "Defense & Maritime Trusted",
-    description: "Decades of experience executing turnkey implementations for elite defense organizations including the Singapore Navy."
+    description: "Decades of experience executing turnkey implementations for elite defense and commercial organizations."
   },
   {
     id: 3,
@@ -77,141 +82,215 @@ export const WHY_CHOOSE_ITEMS: WhyChooseItem[] = [
 ];
 
 export const BRAND_PARTNERS: BrandPartner[] = [
-  { name: "Habia Cable", logoText: "Habia Cable", description: "Premium military naval cabling infrastructure" },
-  { name: "Eaton", logoText: "Eaton", description: "Naval uninterruptible power systems (UPS)" },
-  { name: "Oxley", logoText: "Oxley", description: "Mil-grade tactical cockpit & deck status lighting" },
-  { name: "DEF Marine", logoText: "DEF Marine", description: "Advanced false-alarm free marine fire detection" },
-  { name: "Marinelec Technologies", logoText: "Marinelec", description: "High-spec marine alarms and safety systems" },
-  { name: "Bosch", logoText: "Bosch", description: "High-tier optical surveillance & analytics" },
-  { name: "ITW GSE", logoText: "ITW GSE", description: "Specialized 28V DC aviation ground power systems" },
-  { name: "Fortinet", logoText: "Fortinet", description: "Advanced enterprise IT cyber resilience" },
-  { name: "Shorelink", logoText: "Shorelink", description: "Fixed and telescopic cable management systems" }
+  { name: "Habia Cable", logoText: "Habia Cable", description: "Premium military naval cabling infrastructure", logo: logoHabia },
+  { name: "Oxley", logoText: "Oxley", description: "Mil-grade tactical cockpit & deck status lighting", logo: logoOxley },
+  { name: "Eaton", logoText: "Eaton", description: "Naval uninterruptible power systems (UPS)", logo: logoEaton },
+  { name: "ITW GSE", logoText: "ITW GSE", description: "Specialized 28V DC aviation ground power systems", logo: logoITW },
+  { name: "Bosch", logoText: "Bosch", description: "High-tier optical surveillance & analytics", logo: logoBosch },
+  { name: "DEF Marine", logoText: "DEF Marine", description: "Advanced false-alarm free marine fire detection", logo: logoDEF },
+  { name: "Shorelink", logoText: "Shorelink", description: "Fixed and telescopic cable management systems", logo: logoShorelink },
+  { name: "Marinelec Technologies", logoText: "Marinelec", description: "High-spec marine alarms and safety systems", logo: logoMarinelec },
+  { name: "Fortinet", logoText: "Fortinet", description: "Advanced enterprise IT cyber resilience", logo: logoFortinet },
+  { name: "Krempel", logoText: "Krempel", description: "Electrical insulation materials", logo: logoKrempel },
+  { name: "Eetarp", logoText: "Eetarp", description: "Power quality and insulation monitoring solutions", logo: logoEetarp },
+  { name: "EnerSys", logoText: "EnerSys", description: "Industrial batteries and energy storage solutions", logo: logoEnerSys }
 ];
 
 export const SOLUTION_CATEGORIES: SolutionCategory[] = [
   {
     id: 'marine-lighting',
-    title: "Category A: Marine Lighting & Systems",
+    title: "Marine Lighting & Systems",
     description: "Tactical, high-spec, and fully certified lighting systems designed to excel in extreme conditions.",
     items: [
       {
-        name: "Naval, Military & Aerospace Lighting (Oxley)",
-        marketPosition: "Exclusive Asia Market distributor for military-grade tactical lighting.",
+        name: "Naval & Military and Aerospace Lighting Systems (Oxley Flight Deck Lighting)",
+        marketPosition: "Exclusive Asia Market distributor for specialized military-grade lighting solutions.",
         keyProducts: [
-          "Infrared Covert Lighting: High-spec stealth operations lighting.",
-          "Flight Deck Safety Systems: LED Deck Status Lights, Deck Edge Lights, and Line Up Lights.",
-          "Integrated Test Equipment: Purpose-built validation units for Oxley systems."
+          "Infrared covert lighting designed for stealth operations.",
+          "LED Deck Status and Edge lighting solutions.",
+          "Integrated test equipment purpose-built to validate Oxley systems."
         ],
         keyFeatures: [
-          "Ruggedized construction built under stringent testing procedures to thrive in hyper-harsh aerospace and oceanic states."
+          "Stringent Test Procedures: Rugged and highly reliable layout optimized for hyper-harsh aerospace and oceanic states."
+        ],
+        keyCharacteristics: [
+          "Line Up Light",
+          "Deck Status Light",
+          "Deck Edge Light"
         ]
       }
     ]
   },
   {
     id: 'defense-cables',
-    title: "Category B: Defense Cables & Materials",
-    description: "Naval cables designed to satisfy high-level electromagnetics, lightweight footprints, and supreme safety guidelines.",
+    title: "Defense Cables & Materials",
+    description: "Defense cables designed to satisfy high-level electromagnetics, lightweight footprints, and supreme safety guidelines.",
     items: [
       {
-        name: "Defense Standard (Def-Std 61-12) Cabling (Habia Cable)",
-        marketPosition: "Exclusive authorized distributor delivering premium naval cabling infrastructures.",
+        name: "Defense Standard (Def-Std 61-12) Cables",
+        marketPosition: "Exclusive Habia Cable’s distributor providing world-class cabling solutions for defense applications.",
         keyApplications: [
-          "Defense, marine, nuclear generation, industrial plants, transport infrastructure, telecommunications, control networks, and instrumentation systems."
+          "Defense, marine, nuclear, industrial, transport, telecom, control & instrumentation systems."
         ],
-        trackRecord: "Successfully managed turnkey implementation projects for high-end Navy Frigates and LSTs.",
-        technicalRange: "Scalable architecture supporting small-signal wires up to high-capacity power distribution cables.",
+        technicalRange: "Scales smoothly from low-amplitude signal wires up to specialized High power distribution lines.",
         keyCharacteristics: [
-          "Halogen-free, low-smoke, lightweight & compact profiles, with robust high-screening EMC coverage."
+          "Halogen-Free",
+          "Low-Smoke",
+          "Lightweight & Compact",
+          "High screening EMC coverage"
         ]
       },
       {
-        name: "Raw Materials",
+        name: "Raw Materials & Spare Management & Warehousing",
         description: "Premium supply channels for high-grade Enamel Copper optimized for heavy transformer and industrial winding applications."
       }
     ]
   },
   {
     id: 'mission-power',
-    title: "Category C: Mission-Critical Power & Manufacturing",
-    description: "Uninterruptible power and built-to-order safety transformers serving the elite fleet units directly on active duty.",
+    title: "Mission-Critical Power & Manufacturing",
+    description: "Uninterruptible power and built-to-order safety transformers serving elite fleet units directly on active duty.",
     items: [
       {
-        name: "Naval Uninterruptible Power Supply (Eaton)",
-        marketPosition: "Exclusive Eaton agent for specialized naval power requirements.",
-        trackRecord: "Flawless turnkey delivery of 45 ruggedized units (ranging 8–30 KVA) onboard Formidable-class and Endurance-class vessels.",
+        name: "Mission-Critical Power (Eaton Uninterruptible Power Supply)",
+        marketPosition: "Exclusive Eaton agent for naval power requirements, ensuring uninterrupted mission continuity.",
+        trackRecord: "Turnkey delivery of 45 ruggedized units (ranging 8-30 KVA) onboard naval fleet platforms.",
         keyFeatures: [
-          "Slim Design: Optimally shaped to overcome severe spatial restrictions onboard maritime platforms.",
-          "Modular Architecture: Isolates specific blocks to prevent catastrophic system failures and allows rapid swap-outs.",
-          "Operational Excellence: Fully certified marine reliability outputting low harmonic noise."
+          "Slim design: Engineered specifically to overcome severe physical spatial restrictions onboard vessels.",
+          "Modular concept: Segmented components prevent total system failures and facilitate fast drawdown/turnaround times.",
+          "Marine Excellence: High-reliability marine certification outputting clean energy with very low harmonic noise."
         ]
       },
       {
-        name: "Custom Transformer Manufacturing",
+        name: "Transformer Manufacturing (Marine Transformers & Safety)",
+        marketPosition: "Design and build customized marine transformers to customer’s requirements; currently in service onboard.",
+        trackRecord: "Undertook turnkey implementation across active Military Vessels.",
         capabilities: [
-          "Full design, winding, and enclosure building for marine-grade safety transformers engineered to individual site profiles."
-        ],
-        activeDeployment: [
-          "Currently serving operational duty onboard Missile Corvettes (MCV), Endurance-Class Tank Landing Ships (LST), and Sentinel-Class Maritime Security and Response Vessels (MSRV)."
+          "Bespoke engineering, thermal cooling configurations, custom enclosures, and specialized electrical safety margins built exactly to individual navy specifications."
         ]
       }
     ]
   },
   {
     id: 'safety-surveillance',
-    title: "Category D: Environmental Safety & Surveillance",
-    description: "Robust early warning tracking systems, false-alarm immune sensor suites, and safety low-location pathways.",
+    title: "Environmental Safety & Surveillance",
+    description: "Advanced optical tracking, precise marine fire detection, low location lighting, and active electrical security suites.",
     items: [
       {
-        name: "Integrated Surveillance (Bosch)",
-        marketPosition: "Exclusive Bosch agent for the Singapore Navy.",
-        solutions: [
-          "High-tier optical security platforms backed by integrated video analytics and automated fire alert triggers."
-        ],
-        projectFootprint: [
-          "Formidable-class FFS, Endurance-Class LST, Sentinel-Class MSRV, and Specialized Marine Craft (SMC)."
-        ],
+        name: "Integrated Surveillance & Safety (Bosch CCTV & Fire Detection)",
+        marketPosition: "Exclusive Bosch agent for Singapore Navy.",
+        description: "Advanced security systems integrated with high-performance video analytics and automated fire detection capabilities.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels.",
         keyFeatures: [
-          "Video analytics software acts as an automated early-warning tracking asset in control rooms (not a replacement for the primary Fire Detection System)."
+          "Active Assist: The video analytics cameras serve as an additional supportive monitor in the control room for extremely fast, automated alarm triggers compared to standard fire detectors (this is not a substitution of the FDS)."
         ]
       },
       {
-        name: "Advanced Marine Fire Detection Systems (FDS)",
-        marketPosition: "Exclusive DEF Marine and Marinelec agent for the Singapore Navy.",
-        technology: "Modern sensor suites designed explicitly to cancel out false alarms across complex settings (Public Administration, Data Centers, Defense, and Higher Education).",
-        projectFootprint: [
-          "Formidable-class FFS, Victory-class MCV, Sentinel-Class MSRV, and Specialized Marine Craft (SMC)."
-        ]
+        name: "Fire Detection System (FDS)",
+        marketPosition: "Exclusive DEF Marine & Marinelec agent",
+        description: "Military solutions delivering newer detector technology designed specifically to prevent fault alarms across complex ship layouts.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels."
       },
       {
-        name: "Safety, Escape, and Suppression Systems",
-        keyFeatures: [
-          "Low Location Lighting (LLL): Certified under Singapore Trade Mark Number 40201820006P (Republic of Singapore Trade Marks Act). Successfully integrated across Endurance-Class LSTs, Formidable-class FFS, and Multi-Role Combat Vessels (MRCV).",
-          "Auto Fire Suppression Devices: Bespoke, form-fitted flexible fire suppression tubes (available in custom specifications like 8mm OD side or 18mm OD rear layouts) customized to fit sensitive server racks and electrical enclosures.",
-          "Insulation Resistance Monitoring: High-safety electrical systems that constantly monitor the integrity of wire coatings inside ungrounded (IT) systems, identifying degradation and moisture long before short circuits manifest. Active on MCVs, LSTs, and MSRVs."
-        ]
+        name: "Low Location Lighting (LLL) System",
+        marketPosition: "Trade Mark Number: 40201820006P",
+        description: "Photoluminescent escape path indications fully compliant with registered trademark guidelines.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels."
+      },
+      {
+        name: "Auto Fire Suppression Device",
+        marketPosition: "Bespoke Design & Build",
+        description: "Customized fire suppression devices in flexible tube forms to fit exact customer physical requirements. Available in specifications including 8mm OD (side) and 18mm OD (rear).",
+        trackRecord: "Design and build customized fire suppression device (tube form) to meet customer’s requirements."
+      },
+      {
+        name: "Insulation Resistance Monitoring",
+        marketPosition: "Continuous Electrical Safety",
+        description: "A vital diagnostic process that continuously measures the health of wire and cable coatings in ungrounded (IT) systems. It identifies degradation, moisture, or thermal damage before a short circuit can occur.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels."
       }
     ]
   },
   {
     id: 'specialized-electronics',
-    title: "Category E: Specialized Marine Electronics & Logistics",
-    description: "Aviation ground power units, portside telescopics, smart battery chargers, and water storage pillow tanks.",
+    title: "Specialized Marine Electronics & Logistics",
+    description: "High-spec power interfaces, smart marine battery managers, base logistics support, and advanced harbor-side cabling solutions.",
     items: [
       {
-        name: "Specialized Electronics Integration",
-        keyFeatures: [
-          "BMS DC Chargers: Smart battery management systems engineered for heavy naval deployment cycles onboard Endurance-Class LSTs, Sentinel-Class MSRVs, and Littoral Mission Vessels (LMV).",
-          "Aviation Ground Power: Exclusive regional agent for ITW GSE, delivering specialized 28V DC Aviation Converters supporting flight decks on Formidable-class FFS and Endurance-Class LST vessels.",
-          "Cable Management Systems (CMS): Delivered in partnership with Shorelink. Provides architectural design and integration for Telescopic, Mobile, and Fixed CMS units across major port infrastructures and naval bases."
+        name: "DC Charger with Battery Management System (BMS)",
+        marketPosition: "Turnkey Implementation",
+        description: "Highly rugged battery charging assets with real-time temperature monitoring, active cell balancing, and advanced safety diagnostics.",
+        trackRecord: "Turnkey implementation for Military Vessels"
+      },
+      {
+        name: "Aviation Ground Power",
+        marketPosition: "Exclusive ITW GSE Agent",
+        description: "World-class 28V DC solid-state aviation ground power converters designed to support active flight decks.",
+        trackRecord: "Exclusive ITW GSE agent for Military Solutions"
+      },
+      {
+        name: "Cable Management Systems (CMS)",
+        marketPosition: "Shorelink Partnership",
+        description: "Design and execution of state-of-the-art cable handling solutions supporting maritime port and naval base operations.",
+        trackRecord: "Partnership with Shorelink for the design and turnkey implementation of CMS in Naval Bases & Ports.",
+        keyCharacteristics: [
+          "Telescopic CMS",
+          "Mobile CMS",
+          "Fixed CMS"
         ]
       },
       {
-        name: "Maritime Logistics Solutioning",
+        name: "Maritime Logistics (WaterBladder)",
+        description: "Flexible water and fuel storage solutions designed for rapid base deployment and high-capacity maritime logistics.",
         keyFeatures: [
-          "WaterBladder Systems: Heavy-duty, high-capacity fuel and liquid water pillow tanks (10m³ base capacities) engineered for emergency base deployments. Systems feature fully integrated booster setups, rugged diesel-driven pump carts, and complete maintenance lifecycles."
+          "High capacity: 10m³ Water Pillow capacity.",
+          "Integrated Equipment: Equipped with booster systems and diesel-driven pump carts.",
+          "Lifecycle Support: Offers full maintenance and specialized containerized storage support."
+        ],
+        keyCharacteristics: [
+          "water transfer system (4kw)",
+          "water booster system (2kw)",
+          "petrol driven pump (5 HP)"
         ]
       }
     ]
+  },
+  {
+    id: 'enterprise-security',
+    title: "Enterprise IT & Platform Security",
+    description: "Licensed cybersecurity services, corporate cyber resilience strategies, and regulatory data protection guidelines.",
+    items: [
+      {
+        name: "Licensed Cybersecurity Services",
+        marketPosition: "Licensed Penetration Testing Service Provider",
+        description: "Penetration Testing Service Licence and are authorized under the Cybersecurity Act 2018.",
+        services: [
+          {
+            name: "CISO-as-a-Service",
+            marketPosition: "Cyber Essentials Certification",
+            description: "Focuses on helping organizations achieve the CSA’s \"Cyber Essentials\" certification through health checkups and hygiene gap remediation."
+          },
+          {
+            name: "DPO-as-a-Service",
+            marketPosition: "PDPA Compliance & MSF DSI",
+            description: "Assists organizations in meeting Data Protection Officer (DPO) obligations under the Personal Data Protection Act (PDPA) and adhering to MSF \"Data Security Instructions\" (DSI)."
+          },
+          {
+            name: "Data Security-as-a-Service (MOH)",
+            marketPosition: "Health Information Bill Alignment",
+            description: "Specifically tailored to help healthcare organizations comply with the Health Information Bill (HIB) and MOH cybersecurity guidelines."
+          }
+        ]
+      },
+      {
+        name: "Fortinet Network Security",
+        marketPosition: "Enterprise Security Solutions",
+        description: "Fortigate Firewall and FortiAnalyser.",
+        technology: "Next-Generation Firewall (NGFW) and security analytics platforms designed in robust architectures to secure workloads, enable secure remote work, and deliver continuous visibility across the corporate infrastructure."
+      }
+    ]
   }
-];
+].sort((a, b) => a.title.localeCompare(b.title)).map(category => ({
+  ...category,
+  items: [...category.items].sort((a, b) => a.name.localeCompare(b.name))
+}));

@@ -48,7 +48,7 @@ export default function Home({ setActiveTab }: HomeProps) {
                 src={slide.bgImage}
                 alt={slide.title}
                 referrerPolicy="no-referrer"
-                className="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
 
               {/* Slide Content */}
@@ -57,12 +57,6 @@ export default function Home({ setActiveTab }: HomeProps) {
                   
                   {/* Left Column content */}
                   <div className="w-full md:w-3/5 text-left space-y-6">
-                    
-                    {/* Visual marker label */}
-                    <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-900 border border-blue-200 px-3 py-1 rounded-full text-[11px] font-sans font-bold uppercase tracking-widest">
-                      <span className="h-2 w-2 rounded-full bg-blue-900 animate-pulse"></span>
-                      <span>{slide.topic} — Est. 1981</span>
-                    </div>
 
                     <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
                       Engineering <span className="text-blue-400">Excellence.</span><br />
@@ -85,14 +79,6 @@ export default function Home({ setActiveTab }: HomeProps) {
                           <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform animate-pulse" />
                         </span>
                       </button>
-
-                      <button
-                        onClick={() => setActiveTab('contact')}
-                        className="px-8 py-3.5 border-2 border-slate-300 text-white hover:text-blue-400 hover:border-blue-400 font-bold text-sm rounded-sm transition-all bg-transparent cursor-pointer"
-                        id="hero-cta-contact"
-                      >
-                        Contact an Expert
-                      </button>
                     </div>
 
                   </div>
@@ -100,8 +86,7 @@ export default function Home({ setActiveTab }: HomeProps) {
                   {/* Right Column Abstract Graphic Element */}
                   <div className="hidden md:block w-2/5 pl-12">
                     <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20 text-white space-y-3 shadow-2xl">
-                      <div className="text-xs font-bold tracking-widest text-blue-400 uppercase">Defense & Maritime Sector</div>
-                      <p className="text-sm font-semibold italic text-slate-100">"Trusted by the Singapore Navy"</p>
+                      <div className="text-xs font-bold tracking-widest text-blue-400 uppercase">Defense & Commercial Sector</div>
                       <p className="text-xs text-slate-300 leading-relaxed font-sans">Executing turnkey implementations for elite defense organizations for over 40 years with absolute precision.</p>
                     </div>
                   </div>
@@ -153,7 +138,7 @@ export default function Home({ setActiveTab }: HomeProps) {
           
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
             <h2 className="text-xs font-bold text-blue-900 uppercase tracking-widest">Our Capabilities</h2>
-            <p className="font-display text-4xl font-extrabold text-slate-900 leading-tight">Five Primary Engineering Pillars</p>
+            <p className="font-display text-4xl sm:text-5xl font-black text-slate-900 leading-tight">Five Primary Engineering Pillars</p>
           </div>
 
           {/* Cards Grid */}
@@ -162,12 +147,12 @@ export default function Home({ setActiveTab }: HomeProps) {
               <div
                 key={cap.id}
                 id={`capability-card-${cap.id}`}
-                className="group cursor-default border border-slate-100 p-6 bg-slate-50/50 hover:bg-white hover:border-slate-300 rounded-sm hover:shadow-xs transition-all duration-200"
+                className="cursor-default border border-slate-200 p-6 bg-slate-50/50 rounded-sm"
               >
-                <h3 className="text-xs font-bold text-blue-900 uppercase tracking-tighter mb-2">
+                <h3 className="text-sm sm:text-base md:text-[14px] lg:text-base font-extrabold text-blue-900 uppercase tracking-tight mb-2.5 whitespace-pre-line">
                   {cap.title.split(' & ').join(' & \n')}
                 </h3>
-                <p className="text-xs text-slate-500 leading-snug group-hover:text-slate-900">
+                <p className="text-xs text-slate-600 leading-snug">
                   {cap.description}
                 </p>
               </div>
@@ -200,17 +185,11 @@ export default function Home({ setActiveTab }: HomeProps) {
                 Heritage of Quality
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Why Elite Defense & Maritime Organizations Choose ASEC
+                Why Elite Defense & Commercial Organizations Choose ASEC
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                As an accredited and strategic partner, we operate under meticulous compliance standards to secure maritime hardware readiness. Our deep alliances with key original equipment manufacturers ensure authentic technical execution.
+                As an accredited strategic partner, we operate under meticulous compliance standards to ensure defense hardware readiness. Our deep alliances with key original equipment manufacturers guarantee authentic technical execution.
               </p>
-              
-              <div className="p-4 bg-white rounded-sm border border-slate-200 border-l-4 border-l-blue-900">
-                <p className="text-xs text-slate-700 italic">
-                  "Decades of experience executing turnkey implementations for elite defense organizations including the Singapore Navy."
-                </p>
-              </div>
             </div>
 
             {/* Right pillars list */}
@@ -219,7 +198,7 @@ export default function Home({ setActiveTab }: HomeProps) {
                 <div
                   key={item.id}
                   id={`why-choose-item-${item.id}`}
-                  className="bg-white border border-slate-200 rounded-sm p-6 hover:border-blue-900 transition-all duration-200 flex items-start space-x-4"
+                  className="bg-white border border-slate-200 rounded-sm p-6 flex items-start space-x-4"
                 >
                   <div className="bg-blue-100 text-blue-900 font-bold text-xs px-3 py-1 rounded-sm uppercase tracking-wider shrink-0 font-sans">
                     {item.badge}
@@ -243,22 +222,43 @@ export default function Home({ setActiveTab }: HomeProps) {
 
 
       {/* 4. STRATEGIC BRAND PARTNERS (LOGO RIBBON) */}
-      <section className="bg-slate-100 flex flex-col items-center overflow-hidden border-b border-slate-200 py-6" id="brand-ticker-section">
-        <p className="text-center text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-4 font-sans">
-          Strategic Agency & Manufacturer Alliances (Gray Ribbon)
+      <section className="bg-white py-16 flex flex-col items-center border-b border-slate-200 overflow-hidden" id="brand-ticker-section">
+        <p className="text-center text-sm sm:text-base uppercase tracking-widest text-[#000000] font-black mb-8 font-sans">
+          Sole Distributor & Strategic Business Partners
         </p>
 
         {/* Scrolling tape container loop */}
-        <div className="relative w-full overflow-hidden bg-white/20 py-3 border-y border-slate-200/50">
-          <div className="logo-ribbon-track">
-            {/* Duplicating array 3 times to make seamless looping space */}
-            {[...BRAND_PARTNERS, ...BRAND_PARTNERS, ...BRAND_PARTNERS].map((partner, index) => (
+        <div className="relative w-full overflow-visible bg-white py-6 border-y border-slate-200/40">
+          <div className="logo-ribbon-track overflow-visible hover:[animation-play-state:paused]">
+            {/* Duplicating array 2 times to make seamless looping space (total 24 items for 12 partners) */}
+             {[...BRAND_PARTNERS, ...BRAND_PARTNERS].map((partner, index) => (
               <div
-                key={index}
-                className="flex items-center justify-center w-[250px] px-6 text-center select-none shrink-0"
+                key={`${partner.name}-${index}`}
+                className="flex items-center justify-center w-[230px] px-3 text-center select-none shrink-0 relative group"
               >
-                <div className="grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-opacity font-bold text-[11px] tracking-widest text-slate-600 uppercase font-sans">
-                  {partner.name}
+                <div className="bg-white rounded-lg p-3 w-full h-20 flex items-center justify-center transition-all duration-300">
+                  {partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-w-[170px] max-h-[56px] object-contain select-none transition-transform duration-300 hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <span className="font-sans font-bold text-slate-800 text-sm tracking-wide">{partner.name}</span>
+                  )}
+                </div>
+
+                {/* Styled Tooltip for Better Accessibility */}
+                <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover:opacity-100 group-hover:translate-y-1.5 transition-all duration-300 ease-out z-30 w-56 bg-slate-900 border border-slate-800 text-white rounded-lg p-2.5 shadow-md flex flex-col items-center select-none origin-top">
+                  {/* Small tooltip pointing arrow */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[4px] w-2.5 h-2.5 rotate-45 bg-slate-900 border-t border-l border-slate-800"></div>
+                  <span className="font-sans font-extrabold text-slate-50 text-[11px] leading-tight text-center">
+                    {partner.name}
+                  </span>
+                  <span className="font-sans text-[10px] text-slate-400 mt-1 leading-normal text-center font-medium">
+                    {partner.description}
+                  </span>
                 </div>
               </div>
             ))}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HERO_SLIDES, CAPABILITIES, WHY_CHOOSE_ITEMS, BRAND_PARTNERS } from '../data';
 import { ActiveTab } from '../types';
-import { Shield, ChevronRight, ChevronLeft, ArrowRight, Award } from 'lucide-react';
+import { Shield, ChevronRight, ChevronLeft, ArrowRight, Award, Building, Cpu, Check, ArrowUpRight } from 'lucide-react';
 
 interface HomeProps {
   setActiveTab: (tab: ActiveTab) => void;
@@ -85,9 +85,24 @@ export default function Home({ setActiveTab }: HomeProps) {
 
                   {/* Right Column Abstract Graphic Element */}
                   <div className="hidden md:block w-2/5 pl-12">
-                    <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20 text-white space-y-3 shadow-2xl">
-                      <div className="text-xs font-bold tracking-widest text-blue-400 uppercase">Defense & Commercial Sector</div>
-                      <p className="text-xs text-slate-300 leading-relaxed font-sans">Executing turnkey implementations for elite defense organizations for over 40 years with absolute precision.</p>
+                    <div className="bg-slate-900/40 backdrop-blur-md p-6 rounded-lg border border-white/15 text-white space-y-4 shadow-2xl">
+                      <div className="flex items-center space-x-2">
+                        <span className="h-2 w-2 rounded-full bg-blue-400 animate-pulse" />
+                        <div className="text-xs font-bold tracking-widest text-blue-400 uppercase">Defense & Commercial Sectors</div>
+                      </div>
+                      <p className="text-xs text-slate-200 leading-relaxed font-sans">
+                        Executing turnkey implementations and premium material integrations for elite defense organizations & demanding commercial enterprises for over 40 years.
+                      </p>
+                      
+                      {/* Interactive indicator pills */}
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        <span className="text-[9px] font-bold font-mono px-2 py-0.5 bg-blue-950/80 border border-blue-500/20 text-blue-300 rounded-sm">
+                          DEFENSE (MIL-SPEC)
+                        </span>
+                        <span className="text-[9px] font-bold font-mono px-2 py-0.5 bg-white/10 border border-white/20 text-slate-200 rounded-sm">
+                          COMMERCIAL INDUSTRIAL
+                        </span>
+                      </div>
                     </div>
                   </div>
 

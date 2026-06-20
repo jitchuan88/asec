@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, Cpu, HeartHandshake, Award, Activity, Boxes } from 'lucide-react';
+import { ShieldAlert, Cpu, HeartHandshake, Award, Activity, Boxes, BadgeCheck } from 'lucide-react';
 
 export default function About() {
   return (
@@ -70,7 +70,7 @@ export default function About() {
             <div className="bg-white border border-slate-200 p-6 rounded-sm flex flex-col justify-between hover:border-blue-900 transition-all">
               <div className="space-y-3">
                 <div className="h-10 w-10 bg-blue-100 text-blue-900 rounded-sm flex items-center justify-center">
-                  <Cpu className="h-5 w-5" />
+                  <BadgeCheck className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-base font-bold text-slate-900">
                   OEM & Sole Distributor
@@ -88,7 +88,7 @@ export default function About() {
             <div className="bg-white border border-slate-200 p-6 rounded-sm flex flex-col justify-between hover:border-blue-900 transition-all">
               <div className="space-y-3">
                 <div className="h-10 w-10 bg-blue-100 text-blue-900 rounded-sm flex items-center justify-center">
-                  <Activity className="h-5 w-5" />
+                  <Cpu className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-base font-bold text-slate-900">
                   Design & Manufacturer

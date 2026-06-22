@@ -164,7 +164,7 @@ export default function Home({ setActiveTab }: HomeProps) {
                 id={`capability-card-${cap.id}`}
                 className="cursor-default border border-slate-200 p-6 bg-slate-50/50 rounded-sm"
               >
-                <h3 className="text-sm sm:text-base md:text-[14px] lg:text-base font-extrabold text-blue-900 uppercase tracking-tight mb-2.5 whitespace-pre-line">
+                <h3 className="text-sm sm:text-base md:text-[14px] lg:text-base font-extrabold text-[#130c1e] uppercase tracking-tight mb-2.5 whitespace-pre-line">
                   {cap.title.split(' & ').join(' & \n')}
                 </h3>
                 <p className="text-xs text-slate-600 leading-snug">

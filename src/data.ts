@@ -98,34 +98,40 @@ export const BRAND_PARTNERS: BrandPartner[] = [
 
 export const SOLUTION_CATEGORIES: SolutionCategory[] = [
   {
-    id: 'marine-lighting',
-    title: "Marine Lighting & Systems",
-    description: "Tactical, high-spec, and fully certified lighting systems designed to excel in extreme conditions.",
+    id: 'power-systems',
+    title: "Power Systems & Electrical Infrastructure",
+    description: "This category groups everything related to generating, managing, storing, and transmitting energy. It moves from core power generation down to the cables and management systems that deliver it.",
     items: [
       {
-        name: "Naval & Military and Aerospace Lighting Systems (Oxley Flight Deck Lighting)",
-        marketPosition: "Exclusive Asia Market distributor for specialized military-grade lighting solutions.",
-        keyProducts: [
-          "Infrared covert lighting designed for stealth operations.",
-          "LED Deck Status and Edge lighting solutions.",
-          "Integrated test equipment purpose-built to validate Oxley systems."
-        ],
+        name: "Mission-Critical Power (Eaton Uninterruptible Power Supply)",
+        marketPosition: "Exclusive Eaton agent for naval power requirements, ensuring uninterrupted mission continuity.",
+        trackRecord: "Turnkey delivery of 45 ruggedized units (ranging 8-30 KVA) onboard naval fleet platforms.",
         keyFeatures: [
-          "Stringent Test Procedures: Rugged and highly reliable layout optimized for hyper-harsh aerospace and oceanic states."
-        ],
-        keyCharacteristics: [
-          "Line Up Light",
-          "Deck Status Light",
-          "Deck Edge Light"
+          "Slim design: Engineered specifically to overcome severe physical spatial restrictions onboard vessels.",
+          "Modular concept: Segmented components prevent total system failures and facilitate fast drawdown/turnaround times.",
+          "Marine Excellence: High-reliability marine certification outputting clean energy with very low harmonic noise."
         ]
-      }
-    ]
-  },
-  {
-    id: 'defense-cables',
-    title: "Defense Cables & Materials",
-    description: "Defense cables designed to satisfy high-level electromagnetics, lightweight footprints, and supreme safety guidelines.",
-    items: [
+      },
+      {
+        name: "Aviation Ground Power",
+        marketPosition: "Exclusive ITW GSE Agent",
+        description: "World-class 28V DC solid-state aviation ground power converters designed to support active flight decks.",
+        trackRecord: "Exclusive ITW GSE agent for Military Solutions"
+      },
+      {
+        name: "Transformer Manufacturing (Marine Transformers & Safety)",
+        marketPosition: "Design and build customized marine transformers to customer’s requirements; currently in service onboard.",
+        trackRecord: "Undertook turnkey implementation across active Military Vessels.",
+        capabilities: [
+          "Bespoke engineering, thermal cooling configurations, custom enclosures, and specialized electrical safety margins built exactly to individual navy specifications."
+        ]
+      },
+      {
+        name: "DC Charger with Battery Management System (BMS)",
+        marketPosition: "Turnkey Implementation",
+        description: "Highly rugged battery charging assets with real-time temperature monitoring, active cell balancing, and advanced safety diagnostics.",
+        trackRecord: "Turnkey implementation for Military Vessels"
+      },
       {
         name: "Defense Standard (Def-Std 61-12) Cables",
         marketPosition: "Exclusive Habia Cable’s distributor providing world-class cabling solutions for defense applications.",
@@ -143,39 +149,37 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
       {
         name: "Raw Materials & Spare Management & Warehousing",
         description: "Premium supply channels for high-grade Enamel Copper optimized for heavy transformer and industrial winding applications."
-      }
-    ]
-  },
-  {
-    id: 'mission-power',
-    title: "Mission-Critical Power & Manufacturing",
-    description: "Uninterruptible power and built-to-order safety transformers serving elite fleet units directly on active duty.",
-    items: [
-      {
-        name: "Mission-Critical Power (Eaton Uninterruptible Power Supply)",
-        marketPosition: "Exclusive Eaton agent for naval power requirements, ensuring uninterrupted mission continuity.",
-        trackRecord: "Turnkey delivery of 45 ruggedized units (ranging 8-30 KVA) onboard naval fleet platforms.",
-        keyFeatures: [
-          "Slim design: Engineered specifically to overcome severe physical spatial restrictions onboard vessels.",
-          "Modular concept: Segmented components prevent total system failures and facilitate fast drawdown/turnaround times.",
-          "Marine Excellence: High-reliability marine certification outputting clean energy with very low harmonic noise."
-        ]
       },
       {
-        name: "Transformer Manufacturing (Marine Transformers & Safety)",
-        marketPosition: "Design and build customized marine transformers to customer’s requirements; currently in service onboard.",
-        trackRecord: "Undertook turnkey implementation across active Military Vessels.",
-        capabilities: [
-          "Bespoke engineering, thermal cooling configurations, custom enclosures, and specialized electrical safety margins built exactly to individual navy specifications."
+        name: "Cable Management Systems (CMS)",
+        marketPosition: "Shorelink Partnership",
+        description: "Design and execution of state-of-the-art cable handling solutions supporting maritime port and naval base operations.",
+        trackRecord: "Partnership with Shorelink for the design and turnkey implementation of CMS in Naval Bases & Ports.",
+        keyCharacteristics: [
+          "Telescopic CMS",
+          "Mobile CMS",
+          "Fixed CMS"
         ]
       }
     ]
   },
   {
-    id: 'safety-surveillance',
-    title: "Safety & Surveillance",
-    description: "Advanced optical tracking, precise marine fire detection, low location lighting, and active electrical security suites.",
+    id: 'physical-security',
+    title: "Physical Security & Life Safety Systems",
+    description: "This category consolidates all solutions designed to protect physical assets, vessels, and human life from environmental hazards and physical threats.",
     items: [
+      {
+        name: "Fire Detection System (FDS)",
+        marketPosition: "Exclusive DEF Marine & Marinelec agent",
+        description: "Military solutions delivering newer detector technology designed specifically to prevent fault alarms across complex ship layouts.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels."
+      },
+      {
+        name: "Auto Fire Suppression Device",
+        marketPosition: "Bespoke Design & Build",
+        description: "Customized fire suppression devices in flexible tube forms to fit exact customer physical requirements. Available in specifications including 8mm OD (side) and 18mm OD (rear).",
+        trackRecord: "Design and build customized fire suppression device (tube form) to meet customer’s requirements."
+      },
       {
         name: "Integrated Surveillance & Safety (Bosch CCTV & Fire Detection)",
         marketPosition: "Exclusive Bosch agent for Singapore Navy.",
@@ -186,28 +190,23 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         ]
       },
       {
-        name: "Fire Detection System (FDS)",
-        marketPosition: "Exclusive DEF Marine & Marinelec agent",
-        description: "Military solutions delivering newer detector technology designed specifically to prevent fault alarms across complex ship layouts.",
-        trackRecord: "Undertook turnkey implementation across Military Vessels."
-      },
-      {
         name: "Low Location Lighting (LLL) System",
         marketPosition: "Trade Mark Number: 40201820006P",
         description: "Photoluminescent escape path indications fully compliant with registered trademark guidelines.",
         trackRecord: "Undertook turnkey implementation across Military Vessels."
-      },
+      }
+    ]
+  },
+  {
+    id: 'operational-technology',
+    title: "Operational Technology (OT), Diagnostics & Fleet Logistics",
+    description: "This group covers the highly specialized technical systems that keep fleets operational, including ship controls, predictive maintenance, crew training, and base logistics.",
+    items: [
       {
-        name: "Auto Fire Suppression Device",
-        marketPosition: "Bespoke Design & Build",
-        description: "Customized fire suppression devices in flexible tube forms to fit exact customer physical requirements. Available in specifications including 8mm OD (side) and 18mm OD (rear).",
-        trackRecord: "Design and build customized fire suppression device (tube form) to meet customer’s requirements."
-      },
-      {
-        name: "Insulation Resistance Monitoring",
-        marketPosition: "Continuous Electrical Safety",
-        description: "A vital diagnostic process that continuously measures the health of wire and cable coatings in ungrounded (IT) systems. It identifies degradation, moisture, or thermal damage before a short circuit can occur.",
-        trackRecord: "Undertook turnkey implementation across Military Vessels."
+        name: "Customize Control and Monitoring system",
+        marketPosition: "Bespoke Control Systems",
+        description: "Bespoke control and monitoring integrations engineered with high-integrity diagnostics to secure ships, crafts, and harbor-side platforms.",
+        trackRecord: "• Wired shipyard central Fire and Flooding control and monitoring system\n• Wireless (RF) crafts' Fire and Flooding control and monitoring system"
       },
       {
         name: "Thermographic Inspection Service",
@@ -220,40 +219,32 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         ]
       },
       {
-        name: "Customize Control and Monitoring system",
-        marketPosition: "Bespoke Control Systems",
-        description: "Bespoke control and monitoring integrations engineered with high-integrity diagnostics to secure ships, crafts, and harbor-side platforms.",
-        trackRecord: "• Wired shipyard central Fire and Flooding control and monitoring system\n• Wireless (RF) crafts' Fire and Flooding control and monitoring system"
-      }
-    ]
-  },
-  {
-    id: 'specialized-electronics',
-    title: "Specialized Marine Electronics & Logistics",
-    description: "High-spec power interfaces, smart marine battery managers, base logistics support, and advanced harbor-side cabling solutions.",
-    items: [
-      {
-        name: "DC Charger with Battery Management System (BMS)",
-        marketPosition: "Turnkey Implementation",
-        description: "Highly rugged battery charging assets with real-time temperature monitoring, active cell balancing, and advanced safety diagnostics.",
-        trackRecord: "Turnkey implementation for Military Vessels"
+        name: "Insulation Resistance Monitoring",
+        marketPosition: "Continuous Electrical Safety",
+        description: "A vital diagnostic process that continuously measures the health of wire and cable coatings in ungrounded (IT) systems. It identifies degradation, moisture, or thermal damage before a short circuit can occur.",
+        trackRecord: "Undertook turnkey implementation across Military Vessels."
       },
       {
-        name: "Aviation Ground Power",
-        marketPosition: "Exclusive ITW GSE Agent",
-        description: "World-class 28V DC solid-state aviation ground power converters designed to support active flight decks.",
-        trackRecord: "Exclusive ITW GSE agent for Military Solutions"
-      },
-      {
-        name: "Cable Management Systems (CMS)",
-        marketPosition: "Shorelink Partnership",
-        description: "Design and execution of state-of-the-art cable handling solutions supporting maritime port and naval base operations.",
-        trackRecord: "Partnership with Shorelink for the design and turnkey implementation of CMS in Naval Bases & Ports.",
+        name: "Naval & Military and Aerospace Lighting Systems (Oxley Flight Deck Lighting)",
+        marketPosition: "Exclusive Asia Market distributor for specialized military-grade lighting solutions.",
+        keyProducts: [
+          "Infrared covert lighting designed for stealth operations.",
+          "LED Deck Status and Edge lighting solutions.",
+          "Integrated test equipment purpose-built to validate Oxley systems."
+        ],
+        keyFeatures: [
+          "Stringent Test Procedures: Rugged and highly reliable layout optimized for hyper-harsh aerospace and oceanic states."
+        ],
         keyCharacteristics: [
-          "Telescopic CMS",
-          "Mobile CMS",
-          "Fixed CMS"
+          "Line Up Light",
+          "Deck Status Light",
+          "Deck Edge Light"
         ]
+      },
+      {
+        name: "PLC based Simulator training Lab",
+        description: "Comprehensive software-in-the-loop and hardware-in-the-loop training installations coupled with custom controls emulation.",
+        trackRecord: "2025/26 Project for Shipboard  platform systems simulator"
       },
       {
         name: "Maritime Logistics (WaterBladder)",
@@ -272,9 +263,9 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
     ]
   },
   {
-    id: 'enterprise-security',
-    title: "Enterprise IT & Platform Security",
-    description: "Licensed cybersecurity services, corporate cyber resilience strategies, and regulatory data protection guidelines.",
+    id: 'cyber-security',
+    title: "Cybersecurity & Information Governance",
+    description: "This category is entirely dedicated to protecting digital networks and ensuring regulatory compliance, separating it cleanly from the physical/hardware divisions.",
     items: [
       {
         name: "Licensed Cybersecurity Services",
@@ -305,20 +296,8 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         technology: "Next-Generation Firewall (NGFW) and security analytics platforms designed in robust architectures to secure workloads, enable secure remote work, and deliver continuous visibility across the corporate infrastructure."
       }
     ]
-  },
-  {
-    id: 'computer-based-training',
-    title: "Computer-Based Training integrated with Practice Lab",
-    description: "Immersive simulated platforms, physical emulation rigs, and digital training frameworks for elite industrial and military-technical crew readiness.",
-    items: [
-      {
-        name: "PLC based Simulator training Lab",
-        description: "Comprehensive software-in-the-loop and hardware-in-the-loop training installations coupled with custom controls emulation.",
-        trackRecord: "2025/26 Project for Shipboard  platform systems simulator"
-      }
-    ]
   }
-].sort((a, b) => a.title.localeCompare(b.title)).map(category => ({
+].map(category => ({
   ...category,
   items: [...category.items].sort((a, b) => a.name.localeCompare(b.name))
 }));

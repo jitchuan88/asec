@@ -104,7 +104,7 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
     items: [
       {
         name: "Mission-Critical Power (Eaton Uninterruptible Power Supply)",
-        marketPosition: "Exclusive Eaton agent for naval power requirements, ensuring uninterrupted mission continuity.",
+        marketPosition: "Exclusive Eaton agent for naval power requirements",
         trackRecord: "Turnkey delivery of 45 ruggedized units (ranging 8-30 KVA) onboard naval fleet platforms.",
         keyFeatures: [
           "Slim design: Engineered specifically to overcome severe physical spatial restrictions onboard vessels.",
@@ -120,7 +120,7 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
       },
       {
         name: "Transformer Manufacturing (Marine Transformers & Safety)",
-        marketPosition: "Design and build customized marine transformers to customer’s requirements; currently in service onboard.",
+        marketPosition: "Design and build customized marine transformers",
         trackRecord: "Undertook turnkey implementation across active Military Vessels.",
         capabilities: [
           "Bespoke engineering, thermal cooling configurations, custom enclosures, and specialized electrical safety margins built exactly to individual navy specifications."
@@ -134,7 +134,7 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
       },
       {
         name: "Defense Standard (Def-Std 61-12) Cables",
-        marketPosition: "Exclusive Habia Cable’s distributor providing world-class cabling solutions for defense applications.",
+        marketPosition: "Exclusive Habia Cable’s distributor",
         keyApplications: [
           "Defense, marine, nuclear, industrial, transport, telecom, control & instrumentation systems."
         ],
@@ -198,9 +198,9 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
     ]
   },
   {
-    id: 'operational-technology',
-    title: "Operational Technology (OT), Diagnostics & Fleet Logistics",
-    description: "This group covers the highly specialized technical systems that keep fleets operational, including ship controls, predictive maintenance, crew training, and base logistics.",
+    id: 'vessel-automation-predictive',
+    title: "Vessel Automation & Predictive Maintenance",
+    description: "This category focuses on the intelligent systems, automated controls, and diagnostic tools used to monitor, manage, and maintain the health of the fleet.",
     items: [
       {
         name: "Customize Control and Monitoring system",
@@ -223,10 +223,17 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         marketPosition: "Continuous Electrical Safety",
         description: "A vital diagnostic process that continuously measures the health of wire and cable coatings in ungrounded (IT) systems. It identifies degradation, moisture, or thermal damage before a short circuit can occur.",
         trackRecord: "Undertook turnkey implementation across Military Vessels."
-      },
+      }
+    ]
+  },
+  {
+    id: 'tactical-operations-logistics',
+    title: "Tactical Operations, Logistics & Crew Readiness",
+    description: "This category groups the specialized hardware deployed for active missions, rapid base setups, and the simulation systems used to train the personnel operating them.",
+    items: [
       {
-        name: "Naval & Military and Aerospace Lighting Systems (Oxley Flight Deck Lighting)",
-        marketPosition: "Exclusive Asia Market distributor for specialized military-grade lighting solutions.",
+        name: "Naval & Military Lighting Systems",
+        marketPosition: "Exclusive Oxley Agent for Asia",
         keyProducts: [
           "Infrared covert lighting designed for stealth operations.",
           "LED Deck Status and Edge lighting solutions.",
@@ -297,7 +304,7 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
       }
     ]
   }
-].map(category => ({
+].sort((a, b) => a.title.localeCompare(b.title)).map(category => ({
   ...category,
   items: [...category.items].sort((a, b) => a.name.localeCompare(b.name))
 }));

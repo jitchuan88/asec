@@ -2,7 +2,7 @@ import React from 'react';
 import { SOLUTION_CATEGORIES } from '../data';
 import { 
   Lightbulb, ShieldAlert, Zap, Database, 
-  Anchor, Award, Info, Shield, ArrowLeft, ArrowRight
+  Anchor, Award, Info, Shield, ArrowLeft, ArrowRight, GraduationCap
 } from 'lucide-react';
 import { ActiveTab } from '../types';
 
@@ -20,7 +20,8 @@ export default function Solutions({ selectedCategory, setSelectedCategory, setAc
     if (name.includes('security') || name.includes('cyber') || name.includes('ciso') || name.includes('dpo') || name.includes('fortinet') || name.includes('firewall') || name.includes('insulation') || name.includes('resistance')) return <Shield className="h-6 w-6 text-blue-900" />;
     if (name.includes('cable') || name.includes('cabling') || name.includes('materials')) return <Database className="h-6 w-6 text-blue-900" />;
     if (name.includes('power') || name.includes('transformer') || name.includes('charger') || name.includes('ups')) return <Zap className="h-6 w-6 text-blue-900" />;
-    if (name.includes('surveillance') || name.includes('fire') || name.includes('detection') || name.includes('escape') || name.includes('suppression')) return <ShieldAlert className="h-6 w-6 text-blue-900" />;
+    if (name.includes('surveillance') || name.includes('fire') || name.includes('detection') || name.includes('escape') || name.includes('suppression')) return <ShieldAlert className="h-6 w-6 text-[#190B24]" />;
+    if (name.includes('training') || name.includes('simulator') || name.includes('cbt') || name.includes('lab')) return <GraduationCap className="h-6 w-6 text-blue-900" />;
     return <Anchor className="h-6 w-6 text-blue-900" />;
   };
 
@@ -244,7 +245,7 @@ export default function Solutions({ selectedCategory, setSelectedCategory, setAc
                   {item.trackRecord && (
                     <div className="bg-emerald-50/50 border border-emerald-200/60 rounded-xs p-3.5 space-y-1">
                       <h4 className="font-mono text-[9px] text-emerald-800 font-bold uppercase tracking-wider">Turnkey Track Record / Deployment</h4>
-                      <p className="text-xs text-emerald-950 font-semibold font-sans leading-relaxed">{item.trackRecord}</p>
+                      <p className="text-xs text-emerald-950 font-semibold font-sans leading-relaxed whitespace-pre-line">{item.trackRecord}</p>
                     </div>
                   )}
 

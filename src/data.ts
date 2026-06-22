@@ -173,7 +173,7 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
   },
   {
     id: 'safety-surveillance',
-    title: "Environmental Safety & Surveillance",
+    title: "Safety & Surveillance",
     description: "Advanced optical tracking, precise marine fire detection, low location lighting, and active electrical security suites.",
     items: [
       {
@@ -208,6 +208,22 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         marketPosition: "Continuous Electrical Safety",
         description: "A vital diagnostic process that continuously measures the health of wire and cable coatings in ungrounded (IT) systems. It identifies degradation, moisture, or thermal damage before a short circuit can occur.",
         trackRecord: "Undertook turnkey implementation across Military Vessels."
+      },
+      {
+        name: "Thermographic Inspection Service",
+        marketPosition: "On-conditional monitoring system (OCMS)",
+        description: "Advanced non-invasive thermal profiling and predictive inspection services built to identify latent defects and thermal patterns in live hardware.",
+        keyFeatures: [
+          "Detect electrical switchboard components and cables' health",
+          "Detect fluids choke with temperature changes",
+          "Detect battery body thermal changes"
+        ]
+      },
+      {
+        name: "Customize Control and Monitoring system",
+        marketPosition: "Bespoke Control Systems",
+        description: "Bespoke control and monitoring integrations engineered with high-integrity diagnostics to secure ships, crafts, and harbor-side platforms.",
+        trackRecord: "• Wired shipyard central Fire and Flooding control and monitoring system\n• Wireless (RF) crafts' Fire and Flooding control and monitoring system"
       }
     ]
   },
@@ -287,6 +303,18 @@ export const SOLUTION_CATEGORIES: SolutionCategory[] = [
         marketPosition: "Enterprise Security Solutions",
         description: "Fortigate Firewall and FortiAnalyser.",
         technology: "Next-Generation Firewall (NGFW) and security analytics platforms designed in robust architectures to secure workloads, enable secure remote work, and deliver continuous visibility across the corporate infrastructure."
+      }
+    ]
+  },
+  {
+    id: 'computer-based-training',
+    title: "Computer-Based Training integrated with Practice Lab",
+    description: "Immersive simulated platforms, physical emulation rigs, and digital training frameworks for elite industrial and military-technical crew readiness.",
+    items: [
+      {
+        name: "PLC based Simulator training Lab",
+        description: "Comprehensive software-in-the-loop and hardware-in-the-loop training installations coupled with custom controls emulation.",
+        trackRecord: "2025/26 Project for Shipboard  platform systems simulator"
       }
     ]
   }
